@@ -1,7 +1,7 @@
 #include <cstdlib>
 #include <cstdio>
 
-int process_envp(char *envp[])
+int process_envp(const char *envp[])
 {
     while(*envp)
     {
