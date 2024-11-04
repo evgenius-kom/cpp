@@ -1,7 +1,7 @@
 #include <cstdlib>
 #include <cstdio>
 
-int _main(int argc, char *argv[], char *envp[])
+int process_envp(char *envp[])
 {
     while(*envp)
     {
@@ -17,3 +17,9 @@ int _main(int argc, char *argv[], char *envp[])
 
     return 0;
 }
+
+// int main(int argc, char* argv[], char* envp[])
+// {
+//     process_envp(envp);
+//     return 0;
+// }
