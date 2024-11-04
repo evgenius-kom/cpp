@@ -1,5 +1,5 @@
-#include <cstdlib>
-#include <cstdio>
+#include <cstdlib> // getenv
+#include <cstdio>  // printf
 
 int process_envp(const char *envp[])
 {
