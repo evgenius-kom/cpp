@@ -20,6 +20,15 @@ endforeach()
 file(GLOB SOURCES CONFIGURE_DEPENDS "*.cpp" "src/*.cpp")
 add_executable(${PROJECT_NAME} ${SOURCES})
 
+make_directory(${CMAKE_BINARY_DIR}/build)
+set(CMAKE_BINARY_DIR ${CMAKE_BINARY_DIR}/build)
+
+set_target_properties(${PROJECT_NAME}
+    PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
+        OUTPUT_NAME "exe"
+)
+
 # target_compile_options(${PROJECT_NAME} PRIVATE)
 
 target_include_directories(${PROJECT_NAME}
